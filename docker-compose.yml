@@ -1,0 +1,21 @@
+version: '3'
+services:
+  servicio1:
+    image: anderson
+    container_name: httpd
+    volumes:
+     - C:\Users\sena\Desktop\anderson\datadrive:/volumen
+    ports:
+      - 8026:80
+
+
+  servicio2:
+    image: mariadb
+    container_name: mariadb1
+    environment:
+     - MARIADB_ROOT_PASSWORD= mysecretpassword
+     - MARIADB_DATABASE= mydb
+     - MARIADB_USER= myuser
+     - MARIADB_PASSWORD= myuserpassword
+    ports:
+      - 3306:3306
